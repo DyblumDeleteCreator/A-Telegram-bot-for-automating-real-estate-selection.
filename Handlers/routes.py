@@ -1,4 +1,4 @@
-#welcome to обработчики(типо if выводы там всякие)
+
 from aiogram import Router, F
 from aiogram.filters import Command, StateFilter
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
