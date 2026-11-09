@@ -18,6 +18,8 @@ def get_inline_keyboard():
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text='Заглянуть под капот бота)', url='https://github.com/DyblumDeleteCreator/A-Telegram-bot-for-automating-real-estate-selection./tree/main?tab=readme-ov-file')],
+            [InlineKeyboardButton(text='Политика конфиденциальности', url='https://github.com/DyblumDeleteCreator/A-Telegram-bot-for-automating-real-estate-selection./blob/main/PRIVACY.md')],
+            [InlineKeyboardButton(text='Пользовательское соглашение', url='https://github.com/DyblumDeleteCreator/A-Telegram-bot-for-automating-real-estate-selection./blob/main/TERMS.md')]
         ]
     )
     return keyboard
