@@ -17,7 +17,7 @@ router = Router()
 def get_inline_keyboard():
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardMarkup(text='Заглянуть под капот бота)', url='https://github.com/DyblumDeleteCreator/A-Telegram-bot-for-automating-real-estate-selection./tree/main?tab=readme-ov-file')],
+            [InlineKeyboardButton(text='Заглянуть под капот бота)', url='https://github.com/DyblumDeleteCreator/A-Telegram-bot-for-automating-real-estate-selection./tree/main?tab=readme-ov-file')],
         ]
     )
     return keyboard
