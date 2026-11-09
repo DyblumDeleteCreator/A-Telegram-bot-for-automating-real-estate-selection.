@@ -161,6 +161,8 @@ async def process_rooms(message: Message, state: FSMContext):
         for r in results:
             await message.answer(f"🏬Найдена квартира:\n\n"f"Адрес: {r.get('adress')}\n\n"f"Цена: {r.get('cost')}\n\n"f"Площадь: {r.get('area')}\n\n"f"Комнат: {r.get('rooms')}\n\n"f"Фотографии и более подробная информация о квартире: {r.get('link')}")
 
+    await state.clear()
+
 @router.message(Form.tip, F.text == 'земельный участок')
 async def process_tip(message: Message, state: FSMContext):
     await state.update_data(tip=message.text)
@@ -187,6 +189,8 @@ async def process_square(message: Message, state: FSMContext):
         await message.answer(f"Найдено земельных участков: {len(results)}")
         for r in results:
             await message.answer(f"⛺Найден земельный участок:\n\n"f"Адрес: {r.get('adress')}\n\n"f"Цена: {r.get('cost')}\n\n"f"Площадь: {r.get('square')} соток\n\n"f"Фотографии и более подробная информация о зем участке: {r.get('link')}")
+
+    await state.clear()
 
 
 @router.message(Form.tip, F.text == 'дом')
@@ -250,6 +254,8 @@ async def process_floors(message: Message, state: FSMContext):
         await message.answer(f"Найдено домов: {len(results)}")
         for r in results:
             await message.answer(f"🏡Найден дом: \n\n"f"Адрес: {r.get('adress')}\n\n"f"Цена: {r.get('cost')}\n\n"f"Площадь дома: {r.get('area')}\n\n"f"Площадь двора: {r.get('square')} соток\n\n"f"Комнат: {r.get('rooms')}\n\n"f"Этажей: {r.get('floors')}\n\n"f"Фотографии и более подробная информация о доме: {r.get('link')} ")
+
+    await state.clear()
 
 
 @router.message(F.text == 'Связаться с Николаем📞')
